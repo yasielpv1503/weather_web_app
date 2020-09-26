@@ -16,7 +16,7 @@ const getForeCastByHours = (payload) => {
       time: moment(data.dt_txt).format('HH:SS'),
       dayName: moment(data.dt_txt).format('ddd'),
       state: data.weather[0].main,
-      icon: data.weather[0].icon,      
+      icon: data.weather[0].icon,
       minTemp: decimalAdjust('floor', data.main.temp_min - 272.15, -2),
       maxTemp: decimalAdjust('floor', data.main.temp_max - 272.15, -2),
       data: data
@@ -33,22 +33,21 @@ const ForecastByDay = props => {
   const { params } = match
 
   const [data, setData] = React.useState([])
-  const [title, setTitle] = React.useState("")
   React.useEffect(() => {
     if (typeof fetchData === 'function')
       fetchData(params.day)
-  }, [params.day])
+  }, [params.day, fetchData])
 
   React.useEffect(() => {
     if (!pending && Array.isArray(payload))
       setData(getForeCastByHours(payload))
-  }, [pending])
+  }, [pending, payload])
 
 
   return (
     <div >
       <div className=" cardContainer ">
-  <h1 style={styles.title}>Forecast of {params.day}</h1>
+        <h1 style={styles.title}>Forecast of {params.day}</h1>
 
         {pending ? <SkeletonCardList count={5} /> : null}
         {!pending && Array.isArray(data) ?
@@ -61,7 +60,7 @@ const ForecastByDay = props => {
       </div>
 
       <div className=" cardContainer">
-        <h1 style={styles.help} onClick={()=>history.push("/")}>Go to Home</h1>
+        <h1 style={styles.help} onClick={() => history.push("/")}>Go to Home</h1>
       </div>
 
 
@@ -97,7 +96,7 @@ const styles = {
     fontWeight: 'bold',
     color: '#c3c3c3',
     marginTop: 50,
-    cursor:'pointer'
+    cursor: 'pointer'
   }
 }
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ForecastByDay));

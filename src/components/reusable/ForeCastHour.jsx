@@ -2,11 +2,11 @@ import React from 'react';
 import { withRouter } from "react-router-dom";
 import { getImage } from '../../core/helper/functions';
 const ForeCastHour = (props) => {
-    const { history, value } = props
+    const {  value } = props
     return (
         <>
             <div  className="cardData" style={{ width: "100%", padding: "0px", minHeight: "70px", marginTop: "10px", cursor: 'pointer' }} >
-                <img style={styles.image} src={getImage(value.icon)} />
+                <img alt={""} style={styles.image} src={getImage(value.icon)} />
                 <div style={styles.container}>                     
                     <span style={styles.title}>{value.dayName} at {value.time}</span>
                    

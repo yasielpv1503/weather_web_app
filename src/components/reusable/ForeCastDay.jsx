@@ -6,7 +6,7 @@ const ForeCastDay = (props) => {
     return (
         <>
             <div onClick={() => history.push(`/${value.id}`)} className="cardData" style={{ width: "100%", padding: "0px", minHeight: "70px", marginTop: "10px", cursor: 'pointer' }} >
-                <img style={styles.image} src={getImage(value.icon)} />
+                <img alt={""} style={styles.image} src={getImage(value.icon)} />
                 <div style={styles.container}>
                     <span style={styles.subTitle}>{value.id}</span>
                     <span style={styles.title}>{value.dayName}</span>

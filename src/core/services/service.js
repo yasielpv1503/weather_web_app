@@ -52,7 +52,6 @@ const header = () => {
 
 
 const handleResponse = (response) => {
-    let contentType = response.headers.get("content-type");
     if (!response.ok) {
         mapErrorToMessage(response.clone())
         throw response

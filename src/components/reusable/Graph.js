@@ -1,16 +1,11 @@
 import React from 'react'
 import { Chart } from 'react-charts'
-import useChartConfig from '../../core/helper/useChartConfig'
-
 import * as moment from 'moment'
 
 const Graph = (props) => {
 
     const { graphData } = props
-
-    const { data } = useChartConfig({
-        series: 2
-    })
+ 
     const [chatData, setChartData] = React.useState([])
     React.useEffect(() => {
 

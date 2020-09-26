@@ -74,7 +74,7 @@ const ForecastNextDays = props => {
       let info = getGeneralInfo(payload)
       setTitle(`Forecast in ${info.city} from ${info.startDate} to ${info.endDate}`)
     }
-  }, [pending])
+  }, [pending,payload])
 
 
   return (

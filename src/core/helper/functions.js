@@ -1,7 +1,4 @@
-import { _t } from "./i18n"
-import urlRegex from 'url-regex'
  
-
 export const decimalAdjust = (type, value, exp) => {
     if (typeof exp === 'undefined' || +exp === 0) {
       return Math[type](value);

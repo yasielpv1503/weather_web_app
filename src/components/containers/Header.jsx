@@ -1,8 +1,7 @@
 import React from 'react';
-import { _t } from '../../core/helper/i18n';
 import { withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
-import { Row, Col, Form } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import service from '../../core/services/fetch-data'
 
 const cityList = [
@@ -29,7 +28,7 @@ function Header(props) {
     localStorage.setItem('city', city)
     if (typeof fetchData === 'function' && location.pathname === '/')
       fetchData(city)
-  }, [city, location])
+  }, [city, location,fetchData])
 
   return (
     <>
