@@ -1,9 +1,6 @@
 import { _t } from "./i18n"
 import urlRegex from 'url-regex'
-
-import rainy from '../../assets/rainy.png'
-import sunny from '../../assets/sunny.png'
-import clouds from '../../assets/clouds.png'
+ 
 
 export const decimalAdjust = (type, value, exp) => {
     if (typeof exp === 'undefined' || +exp === 0) {
@@ -20,10 +17,7 @@ export const decimalAdjust = (type, value, exp) => {
     return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
   }
 
-export const getImage = (state) => {
-  switch(state){
-    case 'Rain': return rainy; break;
-    case 'Clouds': return clouds; break;
-    default: return clouds; break;
-  }
+export const getImage = (icon) => {
+ 
+  return require(`../../assets/icons/${icon}.png`)
 }

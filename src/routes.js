@@ -1,11 +1,11 @@
 import React from 'react';
-import Page404 from './components/Page404';
-const Home = React.lazy(() => import('./components/Home'));
-const ForecastByDay = React.lazy(() => import('./components/ForecastByDay'));
+import Page404 from './components/reusable/Page404';
+const ForecastNextDays = React.lazy(() => import('./components/pages/ForecastNextDays'));
+const ForecastByDay = React.lazy(() => import('./components/pages/ForecastByDay'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
-  { path: '/', exact: true, name: 'Home', component: Home  },
+  { path: '/', exact: true, name: 'Home', component: ForecastNextDays  },
   { path: '/:day', exact: true, name: 'Search List', component: ForecastByDay },
  
 

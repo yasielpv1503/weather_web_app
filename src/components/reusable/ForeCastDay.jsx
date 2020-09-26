@@ -1,12 +1,12 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
-import { getImage } from '../core/helper/functions';
+import { getImage } from '../../core/helper/functions';
 const ForeCastDay = (props) => {
     const { history, value } = props
     return (
         <>
             <div onClick={() => history.push(`/${value.id}`)} className="cardOfferts" style={{ width: "100%", padding: "0px", minHeight: "70px", marginTop: "10px", cursor: 'pointer' }} >
-                <img style={styles.image} src={getImage(value.state)} />
+                <img style={styles.image} src={getImage(value.icon)} />
                 <div style={styles.container}>
                     <span style={styles.subTitle}>{value.id}</span>
                     <span style={styles.title}>{value.dayName}</span>

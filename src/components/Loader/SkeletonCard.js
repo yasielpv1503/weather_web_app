@@ -1,8 +1,8 @@
 import React from 'react';
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import Skeleton from 'react-loading-skeleton';
 import { Col, Row } from 'react-bootstrap';
 
-const SkeletonCard = (props) => {
+const SkeletonCard = () => {
     return (
         
         <div style={{marginTop:"20px"}}>

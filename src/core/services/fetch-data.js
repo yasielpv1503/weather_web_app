@@ -4,7 +4,7 @@ import { actions } from "../actions/index";
 function fetchData() {
     return dispatch => {
         dispatch(actions.startHTTPRequest());
-        service.get(`/forecast?q=${process.env.REACT_APP_CITY}&cnt=40&appid=${process.env.REACT_APP_TOKEN}`).then((data) => {
+        service.get(`/forecast?q=${'Matanzas'}&cnt=40&appid=${process.env.REACT_APP_TOKEN}`).then((data) => {
 
             dispatch(actions.stopRequestSuccess(data));
         }).catch(() => {
@@ -15,7 +15,7 @@ function fetchData() {
 
 function fetchDataByDay(date) {
     return dispatch => {
-        dispatch(actions.startFetchDay());
+        dispatch(actions.startHTTPRequest());
         service.get(`/forecast?q=${process.env.REACT_APP_CITY}&cnt=40&appid=${process.env.REACT_APP_TOKEN}`).then((data) => {
             let info = []
            
@@ -23,7 +23,7 @@ function fetchDataByDay(date) {
                 info = data.list.filter(data => data.dt_txt.indexOf(date) !== -1)
 
            
-            dispatch(actions.stopFetchDay(info));
+            dispatch(actions.stopRequestSuccess(info));
         }).catch(() => {
             dispatch(actions.stopHTTPRequestError(""));
         })

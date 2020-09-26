@@ -10,7 +10,7 @@ import {
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css'
 import Layout from './components/containers/Layout';
-import { Loading } from './components/Loading';
+import { Loading } from './components/reusable/Loading';
    
 function App() {
   return (

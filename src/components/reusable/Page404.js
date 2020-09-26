@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { withRouter } from "react-router-dom";
-import { _t } from '../core/helper/i18n';
+import { _t } from '../../core/helper/i18n';
 
 
 

@@ -1,15 +1,13 @@
-import React, { Component, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import Header from './Header';
 import routes from '../../routes';
-import { Redirect, Route, Switch } from 'react-router-dom';
- import Page404 from '../Page404';
-import ForecastNextDays from '../ForecastNextDays';
+import { Route, Switch } from 'react-router-dom';
+ import Page404 from '../reusable/Page404';
 function Layout() {
 
   return (
     <div>
       <Header />
-      <ForecastNextDays />
       <div className="container-fluid">
         <Suspense>
           <Switch>
