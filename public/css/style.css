@@ -3441,8 +3441,7 @@ a {
     position: relative;
     z-index: 10;
     z-index: var(--zindex-fixed-element);
-    height: 45px;
-    height: var(--cd-header-height);
+    height: 85px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;

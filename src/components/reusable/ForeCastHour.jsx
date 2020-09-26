@@ -5,7 +5,7 @@ const ForeCastHour = (props) => {
     const { history, value } = props
     return (
         <>
-            <div  className="cardOfferts" style={{ width: "100%", padding: "0px", minHeight: "70px", marginTop: "10px", cursor: 'pointer' }} >
+            <div  className="cardData" style={{ width: "100%", padding: "0px", minHeight: "70px", marginTop: "10px", cursor: 'pointer' }} >
                 <img style={styles.image} src={getImage(value.icon)} />
                 <div style={styles.container}>                     
                     <span style={styles.title}>{value.dayName} at {value.time}</span>

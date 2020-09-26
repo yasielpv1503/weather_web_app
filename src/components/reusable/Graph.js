@@ -8,7 +8,7 @@ const Graph = (props) => {
 
     const { graphData } = props
 
-    const { data, randomizeData } = useChartConfig({
+    const { data } = useChartConfig({
         series: 2
     })
     const [chatData, setChartData] = React.useState([])
@@ -16,6 +16,7 @@ const Graph = (props) => {
 
         let datumsS1 = []
         let datumsS2 = []
+    
         graphData.forEach(element => {
             datumsS1.push({
                 x: moment(element.date).toDate(),
@@ -29,14 +30,12 @@ const Graph = (props) => {
             })
         });
 
-        setChartData([...chatData,
-        { label: 'Low temperatures', datums: datumsS1 },
+        setChartData([{ label: 'Low temperatures', datums: datumsS1 },
         { label: 'Maximum temperatures', datums: datumsS2 }
         ])
     }, [graphData])
 
-    console.log(graphData)
-    console.log(data)
+    
 
     const series = React.useMemo(
         () => ({

@@ -70,7 +70,6 @@ const ForecastByDay = props => {
   );
 }
 let mapStateToProps = state => {
-  console.log(state.httpReducer.payloadDay)
   return {
     ...state,
     payload: state.httpReducer.payload || [],

@@ -7,13 +7,13 @@ import service from '../../core/services/fetch-data'
 
 const cityList = [
   'Pinar del Rio',
-  'Isla de la Juventud',
+  //'Isla de la Juventud',
   'La Habana',
   'Mayabeque',
   'Artemisa',
   'Matanzas',
-  'Villa Clara',
-  'Santi Spíritu',
+  'Santa Clara',
+  //'Santi Spíritus',
   'Cienfuegos',
   'Ciego de Avila',
   'Las Tunas',
@@ -23,25 +23,24 @@ const cityList = [
   'Guantánamo',
 ]
 function Header(props) {
-  const {pending,fetchData}=props
-  const [city, setCity] = React.useState((localStorage.getItem('city')?localStorage.getItem('city'):process.env.REACT_APP_CITY))
-
-  React.useEffect(()=>{
-    localStorage.setItem('city',city)
-    if (typeof fetchData === 'function')
+  const { pending, fetchData, location } = props
+  const [city, setCity] = React.useState((localStorage.getItem('city') ? localStorage.getItem('city') : process.env.REACT_APP_CITY))
+  React.useEffect(() => {
+    localStorage.setItem('city', city)
+    if (typeof fetchData === 'function' && location.pathname === '/')
       fetchData(city)
-  },[city])
+  }, [city, location])
 
   return (
     <>
 
       <header className="cd-main-header js-cd-main-header" style={{ textAlign: 'right' }}>
-        <div className="cd-nav__list js-cd-nav__list" style={{ fontSize: 20 }}>
+        <div className="cd-nav__list js-cd-nav__list" style={{ fontSize: 20, marginRight: 10 }}>
+          Select a city to show the forecast: &nbsp;
+          <Form.Control disabled={pending || location.pathname !== '/'} style={{ width: "200px", float: 'right' }} onChange={(e) => setCity(e.target.value)} value={city} as="select">
 
-          <Form.Control disabled={pending} style={{ width: "200px", float: 'right' }} onChange={(e) => setCity(e.target.value)} value={city} as="select">
-            
-            {cityList.map((e, i)=><option key={i} value={e}>{e}</option>)}
-        </Form.Control>
+            {cityList.map((e, i) => <option key={i} value={e}>{e}</option>)}
+          </Form.Control>
         </div>
       </header>
 
@@ -64,7 +63,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch(service.fetchData(city))
   }
 });
- 
+
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));
 
 

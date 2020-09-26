@@ -69,6 +69,7 @@ const ForecastNextDays = props => {
 
   React.useEffect(() => {
     if (!pending && payload.list) {
+     
       setData(transformData(payload))
       let info = getGeneralInfo(payload)
       setTitle(`Forecast in ${info.city} from ${info.startDate} to ${info.endDate}`)
