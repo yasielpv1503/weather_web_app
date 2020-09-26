@@ -1,7 +1,6 @@
 import React from 'react';
 import ForeCastDay from '../reusable/ForeCastDay';
 import SkeletonCardList from '../Loader/SkeletonCard';
-import service from '../../core/services/fetch-data'
 import { Col, Row } from 'react-bootstrap';
 import { withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
@@ -63,13 +62,10 @@ const getGeneralInfo = (payload) => {
 
 
 const ForecastNextDays = props => {
-  const { payload, pending, fetchData, history } = props
+  const { payload, pending } = props
   const [data, setData] = React.useState([])
   const [title, setTitle] = React.useState("")
-  React.useEffect(() => {
-    if (typeof fetchData === 'function')
-      fetchData()
-  }, [])
+ 
 
   React.useEffect(() => {
     if (!pending && payload.list) {
@@ -115,11 +111,6 @@ let mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  fetchData: () => {
-    dispatch(service.fetchData())
-  }
-});
 
 const styles = {
   title: {
@@ -137,7 +128,7 @@ const styles = {
     marginTop: 50
   }
 }
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ForecastNextDays));
+export default withRouter(connect(mapStateToProps, null)(ForecastNextDays));
 
 
 

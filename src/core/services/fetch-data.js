@@ -1,10 +1,10 @@
 import service from "./service";
 import { actions } from "../actions/index";
 
-function fetchData() {
+function fetchData(city) {
     return dispatch => {
         dispatch(actions.startHTTPRequest());
-        service.get(`/forecast?q=${'Matanzas'}&cnt=40&appid=${process.env.REACT_APP_TOKEN}`).then((data) => {
+        service.get(`/forecast?q=${city}&cnt=40&appid=${process.env.REACT_APP_TOKEN}`).then((data) => {
 
             dispatch(actions.stopRequestSuccess(data));
         }).catch(() => {
