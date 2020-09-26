@@ -1,0 +1,35 @@
+{
+  "files": {
+    "static/js/0.f72f604a.chunk.js": "http://weather.sacavix.com/static/js/0.f72f604a.chunk.js",
+    "static/js/0.f72f604a.chunk.js.map": "http://weather.sacavix.com/static/js/0.f72f604a.chunk.js.map",
+    "static/js/1.a88bf392.chunk.js": "http://weather.sacavix.com/static/js/1.a88bf392.chunk.js",
+    "static/js/1.a88bf392.chunk.js.map": "http://weather.sacavix.com/static/js/1.a88bf392.chunk.js.map",
+    "main.css": "http://weather.sacavix.com/static/css/main.a6dcec3e.chunk.css",
+    "main.js": "http://weather.sacavix.com/static/js/main.17dcc51a.chunk.js",
+    "main.js.map": "http://weather.sacavix.com/static/js/main.17dcc51a.chunk.js.map",
+    "runtime-main.js": "http://weather.sacavix.com/static/js/runtime-main.3f2525f6.js",
+    "runtime-main.js.map": "http://weather.sacavix.com/static/js/runtime-main.3f2525f6.js.map",
+    "static/css/4.355be238.chunk.css": "http://weather.sacavix.com/static/css/4.355be238.chunk.css",
+    "static/js/4.f401ea49.chunk.js": "http://weather.sacavix.com/static/js/4.f401ea49.chunk.js",
+    "static/js/4.f401ea49.chunk.js.map": "http://weather.sacavix.com/static/js/4.f401ea49.chunk.js.map",
+    "static/js/5.a3c310dc.chunk.js": "http://weather.sacavix.com/static/js/5.a3c310dc.chunk.js",
+    "static/js/5.a3c310dc.chunk.js.map": "http://weather.sacavix.com/static/js/5.a3c310dc.chunk.js.map",
+    "static/js/6.b2f1f439.chunk.js": "http://weather.sacavix.com/static/js/6.b2f1f439.chunk.js",
+    "static/js/6.b2f1f439.chunk.js.map": "http://weather.sacavix.com/static/js/6.b2f1f439.chunk.js.map",
+    "static/js/7.4de30157.chunk.js": "http://weather.sacavix.com/static/js/7.4de30157.chunk.js",
+    "static/js/7.4de30157.chunk.js.map": "http://weather.sacavix.com/static/js/7.4de30157.chunk.js.map",
+    "index.html": "http://weather.sacavix.com/index.html",
+    "precache-manifest.0a2046f72449007bd8cc149edacf5a8d.js": "http://weather.sacavix.com/precache-manifest.0a2046f72449007bd8cc149edacf5a8d.js",
+    "service-worker.js": "http://weather.sacavix.com/service-worker.js",
+    "static/css/4.355be238.chunk.css.map": "http://weather.sacavix.com/static/css/4.355be238.chunk.css.map",
+    "static/css/main.a6dcec3e.chunk.css.map": "http://weather.sacavix.com/static/css/main.a6dcec3e.chunk.css.map",
+    "static/js/4.f401ea49.chunk.js.LICENSE.txt": "http://weather.sacavix.com/static/js/4.f401ea49.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f2525f6.js",
+    "static/css/4.355be238.chunk.css",
+    "static/js/4.f401ea49.chunk.js",
+    "static/css/main.a6dcec3e.chunk.css",
+    "static/js/main.17dcc51a.chunk.js"
+  ]
+}
